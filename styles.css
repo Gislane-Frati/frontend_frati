@@ -32,6 +32,18 @@ body {
   padding-top: var(--header-total);
 }
 
+/* Home (index): o hero ocupa o topo; demais páginas ganham respiro extra
+   para o cabeçalho fixo não “comer” título/conteúdo — sem mudar a index */
+body.page-inner {
+  padding-top: calc(var(--header-total) + 16px);
+}
+
+body.page-inner main.page-content {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 32px;
+}
+
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { display: block; max-width: 100%; }
@@ -768,7 +780,7 @@ section {
 }
 
 .empresa-gridinstitucional {
-  margin-top: 80px;
+  margin-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
@@ -1153,7 +1165,7 @@ footer {
   }
 
   .logo img {
-    max-height: 52px;
+    max-height: 100px;
     max-width: 100%;
   }
 
